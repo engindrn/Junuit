@@ -28,7 +28,7 @@ public class C01_Assertions {
     }
     @After
     public void tearDown(){
-       // driver.close();
+        driver.close();
     }
 
     @Test
@@ -48,6 +48,9 @@ public class C01_Assertions {
         login.click();
 
         // bastigimizda “Invalid email address” uyarisi ciktigini test edelim
-        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='alert alert-danger']")).isDisplayed());
+
+        Assert.assertTrue(driver.findElement(By.xpath("//*[text()='Invalid email address.']")).isDisplayed());
+
+
     }
 }
