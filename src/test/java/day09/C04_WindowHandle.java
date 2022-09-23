@@ -22,17 +22,20 @@ public class C04_WindowHandle {
     }
     @After
     public void tearDown() {
-        driver.quit();
+        //driver.quit();
     }
     @Test
     public void test1() throws InterruptedException {
         //https://the-internet.herokuapp.com/windows adresine gidin.
         driver.get("https://the-internet.herokuapp.com/windows");
+
         //Sayfadaki textin “Opening a new window” olduğunu doğrulayın.
         Assert.assertTrue(driver.findElement(By.xpath("//*[text()='Opening a new window']")).isDisplayed());
+
         //Sayfa başlığının(title) “The Internet” olduğunu doğrulayın.
         Assert.assertTrue(driver.getTitle().contains("The Internet"));
         Thread.sleep(2000);
+
         //Click Here butonuna basın.
         driver.findElement(By.xpath("//*[text()='Click Here']")).click();
         Thread.sleep(2000);
@@ -43,7 +46,7 @@ public class C04_WindowHandle {
         indexi 1(bir) dir ve ikinci açılan pencerede yada sekmede işlem yapabilmek için
         driver.switchTo().window(listAdı.get(1)) methodunu kullanırız.
          */
-        List<String> windowList = new ArrayList<String>(driver.getWindowHandles());
+        List<String> windowList = new ArrayList<>(driver.getWindowHandles());
         System.out.println("Window Handle Değerleri = "+ windowList);
         driver.switchTo().window(windowList.get(1));
         /*
@@ -58,11 +61,15 @@ public class C04_WindowHandle {
          */
         //Acilan yeni pencerenin sayfa başlığının (title) “New Window” oldugunu dogrulayin.
         Assert.assertEquals(driver.getTitle(),"New Window");
+
         //Sayfadaki textin “New Window” olduğunu doğrulayın.
         Assert.assertTrue(driver.findElement(By.xpath("//h3")).isDisplayed());
+        
         //Bir önceki pencereye geri döndükten sonra sayfa başlığının “The Internet” olduğunu  doğrulayın.
         Thread.sleep(2000);
         driver.switchTo().window(windowList.get(0));
         Assert.assertEquals("The Internet",driver.getTitle());
+
     }
 }
+

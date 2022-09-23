@@ -37,15 +37,15 @@ public class C01_Iframe {
     @Test
     public void test1() throws InterruptedException {
 
-        //● https://the-internet.herokuapp.com/iframe adresine gidin.
+        // https://the-internet.herokuapp.com/iframe adresine gidin.
         driver.get("https://the-internet.herokuapp.com/iframe");
 
-        //○ “An IFrame containing….” textinin erisilebilir oldugunu test edin ve konsolda yazdirin.
+        //“An IFrame containing….” textinin erisilebilir oldugunu test edin ve konsolda yazdirin.
         WebElement iframeYazisi = driver.findElement(By.xpath("//h3"));
         Assert.assertTrue(iframeYazisi.isDisplayed());
         System.out.println(iframeYazisi.getText());
 
-        //○ Text Box’a “Merhaba Dunya!” yazin.
+        // Text Box’a “Merhaba Dunya!” yazin.
         WebElement textBox = driver.findElement(By.id("mce_0_ifr")); // Frame'e geçiş yapmadan önce orayı id ile locate ederiz
         driver.switchTo().frame(textBox); // Locate ettiğimiz frame geçmek için bu methodu kullanırız
         WebElement textBoxFrame = driver.findElement(By.xpath("//p")); //iframe i yeniden locate ettik
@@ -53,7 +53,7 @@ public class C01_Iframe {
         Thread.sleep(2000);
         textBoxFrame.sendKeys("Merhaba Dunya!");
 
-        //○ TextBox’in altinda bulunan “Elemental Selenium” linkini textinin gorunur oldugunu dogrulayin ve konsolda yazdirin
+        //TextBox’in altinda bulunan “Elemental Selenium” linkini textinin gorunur oldugunu dogrulayin ve konsolda yazdirin
 
         driver.switchTo().defaultContent(); // Iframe'den çıkıp ana sayfaya geçmek için bu method kullanılır********
 

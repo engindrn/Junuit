@@ -42,7 +42,7 @@ public class C03_BasicAuthentication {
      }
      @Test
     public void test1 (){
-         driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");  //url nın başına kullanıcı adı ve şifre
+         driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");  //url nın başına kullanıcı adı ve şifre, @
                                                                                     // ekleyerek direk giridik
     //giriş yaptığınızı doğrulayın
     WebElement tag= driver.findElement(By.className("example"));
