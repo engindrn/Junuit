@@ -51,8 +51,8 @@ public class C04_Actions extends TestBaseBeforeAfter {
           String expected="Elemental Selenium";
           Assert.assertTrue(actualText.contains(expected));
 
-         //2. Assert.assertTrue(text.isDisplayed());
-        //3.yolAssert.assertEquals("Elemental Selenium",driver.findElement(By.xpath("//h1")).getText());
+         //2.yol Assert.assertTrue(text.isDisplayed());
+        //3.yol  Assert.assertEquals("Elemental Selenium",driver.findElement(By.xpath("//h1")).getText());
 
     }
 }
