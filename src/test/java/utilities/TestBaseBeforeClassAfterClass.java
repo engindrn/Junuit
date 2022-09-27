@@ -8,10 +8,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public abstract class TestBaseBeforeClassAfterClass {
 
     protected static WebDriver driver;
+    protected static String tarih;
 
     @BeforeClass
     public static void setUp() {
@@ -19,6 +22,10 @@ public abstract class TestBaseBeforeClassAfterClass {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+
+        LocalDateTime date = LocalDateTime.now();
+        DateTimeFormatter formater = DateTimeFormatter.ofPattern("YYMMddHHmmss");
+        tarih = date.format(formater);
 
     }
     @AfterClass
