@@ -57,7 +57,7 @@ public class C04_DropDown {
         System.out.println(option.getFirstSelectedOption().getText());
 
         //Tüm dropdown değerleri(value) yazdırın
-        List<WebElement> ddmlist= driver.findElements(By.xpath("//option")); //normal yolla dd menüdeki elementleri koyduk
+       List<WebElement> ddmlist= driver.findElements(By.xpath("//option")); //normal yolla dd menüdeki elementleri koyduk
 
        // List<WebElement> ddmlist=select.getOptions(); //getOptions() methoduyla dropDown menüdeki tüm elementlerin listesini koyduk
 

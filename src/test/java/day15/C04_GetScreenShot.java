@@ -20,9 +20,15 @@ public class C04_GetScreenShot extends TestBaseBeforeAfter {
         Geçici bir File class'ından değişkene TakesScreenShot'dan oluşturduğum obje'den getScreenShotAs
         methonu kullanarak geçici bir file oluştururuz
          */
-        TakesScreenshot ts = (TakesScreenshot) driver;
-        File tumSayfaResmi = ts.getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(tumSayfaResmi,new File("target/ekranGoruntusu/AllPage"+tarih+".jpeg"));
+        TakesScreenshot ts = (TakesScreenshot) driver;  //objemizi oluşturduk.casting yaptık
+        File tumSayfaResmi = ts.getScreenshotAs(OutputType.FILE); //geçici bir file aldık Screenshot u
+        FileUtils.copyFile(tumSayfaResmi,new File("target/ekranGoruntusu/AllPage"+tarih+".jpeg")); //sonra kaydettik
 
     }
 }
+/*    localdatetime classından obfemizi oluşturduk ve TestBase clasımıza koyduk her ekran resmin için yeni isim verirken
+kullanıyoruz böylelikle eski resmi silmeden farklı isimle katdediyoruz.
+
+         LocalDateTime date = LocalDateTime.now();
+        DateTimeFormatter formater = DateTimeFormatter.ofPattern("YYMMddHHmmss");
+        String tarih = date.format(formater);    */
