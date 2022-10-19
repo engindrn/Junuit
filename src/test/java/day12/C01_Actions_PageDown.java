@@ -6,7 +6,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import utilities.TestBaseBeforeAfter;
 
-public class C01_Actions extends TestBaseBeforeAfter {
+public class C01_Actions_PageDown extends TestBaseBeforeAfter {
 
     @Test
     public void test01() {

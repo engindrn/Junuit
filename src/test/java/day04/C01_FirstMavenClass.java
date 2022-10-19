@@ -26,9 +26,8 @@ public class C01_FirstMavenClass {
         driver.get("https://www.amazon.de");
 
         //çerezleri kabul ettik
-        WebElement cookies= driver.findElement(By.id("sp-cc-accept"));
-        cookies.click();
-
+        driver.findElement(By.id("sp-cc-accept")).click();  //bir defa kullanacaksak webelemente atamya gerek yok
+        
       // 2- arama kutusunu locate edelim
         WebElement searchBox= driver.findElement(By.id("twotabsearchtextbox"));
 

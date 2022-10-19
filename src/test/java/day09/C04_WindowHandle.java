@@ -11,7 +11,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
-public class C04_WindowHandle {
+public class
+C04_WindowHandle {
     WebDriver driver;
     @Before
     public void setup() {

@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.time.Duration;
 
-public class C01_SuatHoca {
+public class C05_SuatHoca {
     WebDriver driver;
 
     @Before

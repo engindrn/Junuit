@@ -13,7 +13,7 @@ import java.time.Duration;
 
 public class C02_BeforeAfter {
 
-    WebDriver driver;     // class seviyesinde objemizin oluşturduk
+    WebDriver driver;     //diğer methodlardan da kullanabilmek için class seviyesinde objemizin oluşturduk
 
     @Before
     public void setUp(){
