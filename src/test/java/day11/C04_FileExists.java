@@ -25,7 +25,7 @@ public class C04_FileExists {
 
         String masaUstuDosyaYolu = farkliBolum+ortakBolum; // Masaüstündeki dosya yolunu gösterir
 
-        System.out.println(masaUstuDosyaYolu); //"C:\Users\ENGİN\Desktop\text.txt.txt"
+        System.out.println(masaUstuDosyaYolu);   //"C:\Users\ENGİN\Desktop\text.txt.txt"
         System.out.println(Files.exists(Paths.get(dosyaYolu)));
         Assert.assertTrue(Files.exists(Paths.get(dosyaYolu)));
         */

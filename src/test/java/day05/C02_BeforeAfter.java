@@ -18,7 +18,7 @@ public class C02_BeforeAfter {
     @Before
     public void setUp(){
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        driver = new ChromeDriver();                      //burda atama yaptik class level a gitti artik diger scoplarda da kullanilabilir
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
     }
